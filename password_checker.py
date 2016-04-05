@@ -28,16 +28,16 @@ while True:
         print("Invalid password")
         password=input(">> ")
     elif not check_password(password,UPPER):
-        print("Uppercase issue")
+        print("Invalid password")
         password=input(">> ")
     elif not check_password(password,LOWER):
-        print("Lowercase issue")
+        print("Invalid password")
         password=input(">> ")
     elif not check_password(password,DIGITS):
-        print("Number issue")
+        print("Invalid password")
         password=input(">> ")
     elif not check_password(password,SPECIAL):
-        print("Special characters issue")
+        print("Invalid password")
         password=input(">> ")
     else:
         break
