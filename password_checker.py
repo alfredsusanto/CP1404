@@ -32,8 +32,13 @@ while True:
         password=input(">> ")
     elif not check_password(password,LOWER):
         print("Lowercase issue")
+        password=input(">> ")
     elif not check_password(password,DIGITS):
+        print("Number issue")
+        password=input(">> ")
+    elif not check_password(password,SPECIAL):
         print("Special characters issue")
+        password=input(">> ")
     else:
         break
 
