@@ -1,9 +1,9 @@
-def areaOfRectangle(base,height):
-    area=(base*height)/2
-    print("The area of the rectangle: {}".format(area))
+def areaOfRectangle(length,width):
+    area = length*width
+    print("The area of the rectangle: {} m^2".format(area))
 
-base = int(input("Enter base: "))
-height = int(input("Enter height: "))
+length = int(input("Enter length: "))
+width = int(input("Enter width: "))
 
-result= areaOfRectangle(base,height)
+result= areaOfRectangle(length,width)
 
