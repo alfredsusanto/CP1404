@@ -1,21 +1,34 @@
-lower = 10
-upper = 80
+LOWER = 10
+UPPER = 80
 
-def get_number(lower,upper):
-    first=int(input("Enter first number( {0} --- {1}): \n>>>".format(lower,upper).strip()))
-    second=int(input("Enter second number( {0} --- {1}): \n>>>".format(lower,upper).strip()))
+def get_number():
     while True:
-        if first < second:
-            break
-        print("Second number is too low")
-        second=int(input("Enter second number( {0} --- {1}): \n>>>".format(lower,upper).strip()))
+        low = input("Enter a number({}-{}):".format(LOWER, UPPER)).strip()
+        if low.isdecimal():
+            int1 = int(low)
+            if LOWER <= int1 <= UPPER:
+                break
+            else:
+                print("Please enter a valid number")
+        else:
+            print("Please enter a valid number")
+    int1 = int(low)
+    while True:
+        upp = input("Enter a number({}-{}):".format(LOWER, UPPER)).strip()
+        if upp.isdecimal():
+            int2 = int(upp)
+            if int1 <= int2 <= UPPER:
+                break
+            else:
+                print("Please enter a valid number")
+        else:
+            print("Please enter a valid number")
+    int2 = int(upp)
+    return int1, int2
 
-    for i in range(first, second):
-        print("{} {}".format(i,chr(i)))
 
-
-    return first, second
-
-result = get_number(lower,upper)
+low, upp = get_number()
+for i in range(low, upp):
+    print("{} {}".format(i, chr(i)))
 
 
