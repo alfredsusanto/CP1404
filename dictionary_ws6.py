@@ -9,7 +9,7 @@ for each in listings:
     else:
         dictionary[each] = 1
 
-sorted_keys = sorted(dictionary)
+sorted_keys = sorted(dictionary, key=dictionary.__getitem__, reverse= True)
 
-for each in sorted_keys:
-    print("{} : {:<5d}".format(each, dictionary[each]))
+for key in sorted_keys:
+    print("{} : {:<5d}".format(key, dictionary[key]))
